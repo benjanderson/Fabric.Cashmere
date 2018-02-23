@@ -58,20 +58,10 @@ export const routes: Routes = [
             {
                 path: 'tabs',
                 component: TabsDemoComponent,
-                children: [
-                    {
-                        path: 'tab1',
-                        component: Tab1DemoComponent
-                    },
-                    {
-                        path: 'tab2',
-                        component: Tab2DemoComponent
-                    },
-                    {
-                        path: 'tab3',
-                        component: Tab3DemoComponent
-                    }
-                ]
+            },
+            {
+                path: 'tabs/:id',
+                component: TabsDemoComponent,
             },
             {
                 path: 'navbar',
