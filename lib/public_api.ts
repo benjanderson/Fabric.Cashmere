@@ -20,3 +20,4 @@ export * from './src/subnav/subnav.module';
 export * from './src/tabs/tabs.module';
 export * from './src/tile/tile.module';
 export * from './src/typeform-survey/typeform-survey.module';
+export * from './src/type-ahead/type-ahead.module';

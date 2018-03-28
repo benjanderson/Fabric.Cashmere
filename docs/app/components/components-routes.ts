@@ -22,6 +22,7 @@ import { ChipDemoComponent } from './chip/chip-demo.component';
 import { InputDemoComponent } from './input/input-demo.component';
 import { ProgressIndicatorDemoComponent } from './progress-indicator/progress-indicator-demo.component';
 import { ModalDemoComponent } from './modal/modal-demo.component';
+import { TypeAheadDemoComponent } from './type-ahead/type-ahead-demo.component';
 
 export const routes: Routes = [
     {
@@ -136,6 +137,11 @@ export const routes: Routes = [
                 path: 'chip',
                 component: ChipDemoComponent,
                 data: { title: 'Chips' }
+            },
+            {
+                path: 'type-ahead',
+                component: TypeAheadDemoComponent,
+                data: { title: 'Type Ahead' }
             },
             {
                 path: 'typeform-survey',

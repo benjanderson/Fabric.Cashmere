@@ -8,12 +8,14 @@ import { StylesModule } from './styles/styles.module';
 import { IconModule } from '../../lib/src/icon/icon.module';
 import { ListModule } from '../../lib/src/list/list.module';
 import { GuidesModule } from './guides/guides.module';
+import { CashmereModule } from '../../lib/src/cashmere.module';
 
 @NgModule({
     declarations: [
         AppComponent
     ],
     imports: [
+        CashmereModule,
         ComponentsModule,
         StylesModule,
         GuidesModule,
