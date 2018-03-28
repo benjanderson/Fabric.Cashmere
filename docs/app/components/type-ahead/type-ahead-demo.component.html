@@ -1,5 +1,25 @@
-<p>
-  type-ahead-demo works!
-</p>
+<div class="demo-content">
+    <h1>Tile</h1>
+    <h6>Last updated {{lastModified | date:'longDate'}}</h6>
 
-<hc-type-ahead></hc-type-ahead>
+    <hc-tab-set direction="horizontal">
+    <hc-tab tabTitle="Overview">
+
+    <hc-tile>
+        <h5>About</h5>
+        <p>Example </p>
+    </hc-tile>
+
+    <hc-tile>
+        <h5>Example</h5>
+        <hc-type-ahead></hc-type-ahead>
+    </hc-tile>
+
+    </hc-tab>
+    <hc-tab tabTitle="Documentation">
+        <div [hcMarkdown]="document"></div>
+    </hc-tab>
+    </hc-tab-set>
+</div>
+
+
