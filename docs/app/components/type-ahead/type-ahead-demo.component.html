@@ -1,25 +1,24 @@
 <div class="demo-content">
-    <h1>Tile</h1>
+    <h1>Type Ahead</h1>
     <h6>Last updated {{lastModified | date:'longDate'}}</h6>
 
     <hc-tab-set direction="horizontal">
-    <hc-tab tabTitle="Overview">
+        <hc-tab tabTitle="Overview">
 
-    <hc-tile>
-        <h5>About</h5>
-        <p>Example </p>
-    </hc-tile>
+            <hc-tile>
+                <h5>About</h5>
+                <p>Example </p>
+            </hc-tile>
 
-    <hc-tile>
-        <h5>Example</h5>
-        <hc-type-ahead></hc-type-ahead>
-    </hc-tile>
+            <hc-tile>
+                <h5>Example</h5>
+                <ng2-completer [(ngModel)]="selected" [datasource]="states" [minSearchLength]="0"></ng2-completer>
+                <label [innerText]="selected"></label>
+            </hc-tile>
 
-    </hc-tab>
-    <hc-tab tabTitle="Documentation">
-        <div [hcMarkdown]="document"></div>
-    </hc-tab>
+        </hc-tab>
+        <hc-tab tabTitle="Documentation">
+            <div [hcMarkdown]="document"></div>
+        </hc-tab>
     </hc-tab-set>
 </div>
-
-
