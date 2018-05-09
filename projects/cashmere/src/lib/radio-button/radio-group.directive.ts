@@ -29,8 +29,8 @@ let nextUniqueId = 0;
 })
 export class RadioGroupDirective implements ControlValueAccessor, AfterContentInit {
     @Output() change: EventEmitter<RadioButtonChangeEvent> = new EventEmitter<RadioButtonChangeEvent>();
-    @ContentChildren(forwardRef(() => RadioButtonComponent), {descendants: true})
-    _radios: QueryList<RadioButtonComponent>;
+    // @ContentChildren(forwardRef(() => RadioButtonComponent), {descendants: true})
+    // _radios: QueryList<RadioButtonComponent>;
     private _value: any = null;
     private _name = `hc-radio-group-${nextUniqueId++}`;
     private _disabled = false;
@@ -83,15 +83,15 @@ export class RadioGroupDirective implements ControlValueAccessor, AfterContentIn
         this._markRadiosForCheck();
     }
 
-    get selected(): RadioButtonComponent | null {
-        return this._selected;
-    }
+    // get selected(): RadioButtonComponent | null {
+    //     return this._selected;
+    // }
 
-    set selected(button: RadioButtonComponent | null) {
-        this._selected = button;
-        this.value = button ? button.value : null;
-        this._checkSelectedRadio();
-    }
+    // set selected(button: RadioButtonComponent | null) {
+    //     this._selected = button;
+    //     this.value = button ? button.value : null;
+    //     this._checkSelectedRadio();
+    // }
 
     constructor(private _cdRef: ChangeDetectorRef) {}
 
@@ -121,14 +121,14 @@ export class RadioGroupDirective implements ControlValueAccessor, AfterContentIn
 
     emitChangeEvent(): void {
         if (this._initialized) {
-            this.change.emit(new RadioButtonChangeEvent(this._selected, this.value));
+            // this.change.emit(new RadioButtonChangeEvent(this._selected, this.value));
         }
     }
 
     private _markRadiosForCheck() {
-        if (this._radios) {
-            this._radios.forEach(radio => radio.markForCheck());
-        }
+        // if (this._radios) {
+        //     this._radios.forEach(radio => radio.markForCheck());
+        // }
     }
 
     private _updateSelectedRadio() {
@@ -145,16 +145,16 @@ export class RadioGroupDirective implements ControlValueAccessor, AfterContentIn
     }
 
     private _checkSelectedRadio() {
-        if (this._selected && !this._selected.checked) {
-            this._selected.checked = true;
-        }
+        // if (this._selected && !this._selected.checked) {
+        //     this._selected.checked = true;
+        // }
     }
 
     private _updateRadioButtonNames(): void {
-        if (this._radios) {
-            this._radios.forEach(radio => {
-                radio.name = this.name;
-            });
-        }
+        // if (this._radios) {
+        //     this._radios.forEach(radio => {
+        //         radio.name = this.name;
+        //     });
+        // }
     }
 }

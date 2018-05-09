@@ -48,7 +48,7 @@ export class RadioButtonComponent implements OnInit {
             if (this.radioGroup !== null && !this.checked) {
                 this.checked = this.radioGroup.value === value;
             } else if (this.radioGroup !== null && this.checked) {
-                this.radioGroup.selected = this;
+                // this.radioGroup.selected = this;
             }
         }
     }
@@ -86,9 +86,9 @@ export class RadioButtonComponent implements OnInit {
         if (this._checked !== newCheckedState) {
             this._checked = newCheckedState;
             if (newCheckedState && this.radioGroup && this.radioGroup.value !== this.value) {
-                this.radioGroup.selected = this;
+                // this.radioGroup.selected = this;
             } else if (!newCheckedState && this.radioGroup && this.radioGroup.value === this.value) {
-                this.radioGroup.selected = null;
+                // this.radioGroup.selected = null;
             }
             this.cdRef.markForCheck();
         }
