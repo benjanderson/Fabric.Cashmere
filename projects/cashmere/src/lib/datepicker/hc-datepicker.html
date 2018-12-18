@@ -1,71 +1,148 @@
-<div class="hc-datepicker-header">
-    <div class="hc-datepicker-header-left">
-        <span class="hc-datepicker-header-text">Dec 2018</span>
-        <span class="hc-datepicker-header-chevron"></span>
+<ng-container *ngIf="_pickerMode == 1">
+    <div class="hc-datepicker-header">
+        <div class="hc-datepicker-header-left" (click)="_togglePicker(2)">
+            <span class="hc-datepicker-header-text">Dec 2018</span> <span class="hc-datepicker-header-chevron"></span>
+        </div>
+        <div class="hc-datepicker-header-right">
+            <span class="hc-datepicker-header-button"> <span class="hc-datepicker-header-leftButton"></span> </span>
+            <span class="hc-datepicker-header-today">Today</span>
+            <span class="hc-datepicker-header-button"> <span class="hc-datepicker-header-rightButton"></span> </span>
+        </div>
+        <div class="hc-datepicker-header-weekdays">
+            <span class="hc-datepicker-header-label">Sun</span> <span class="hc-datepicker-header-label">Mon</span>
+            <span class="hc-datepicker-header-label">Tue</span> <span class="hc-datepicker-header-label">Wed</span>
+            <span class="hc-datepicker-header-label">Thu</span> <span class="hc-datepicker-header-label">Fri</span>
+            <span class="hc-datepicker-header-label">Sat</span>
+        </div>
     </div>
-    <div class="hc-datepicker-header-right">
-        <span class="hc-datepicker-header-button">
-            <span class="hc-datepicker-header-leftButton"></span>
-        </span>
-        <span class="hc-datepicker-header-today">Today</span>
-        <span class="hc-datepicker-header-button">
-            <span class="hc-datepicker-header-rightButton"></span>
-        </span>
+    <div class="hc-datepicker-body">
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">1</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">2</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-today"><span class="hc-datepicker-body-circle">3</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">4</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">5</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">6</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">7</span></span>
+        </div>
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">8</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-selected"><span class="hc-datepicker-body-circle">9</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">10</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">11</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">12</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">13</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">14</span></span>
+        </div>
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">15</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">16</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">17</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">18</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-range-start"><span class="hc-datepicker-body-circle">19</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-range"><span class="hc-datepicker-body-circle">20</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-range"><span class="hc-datepicker-body-circle">21</span></span>
+        </div>
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-date hc-datepicker-range"><span class="hc-datepicker-body-circle">22</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-range"><span class="hc-datepicker-body-circle">23</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-range-end"><span class="hc-datepicker-body-circle">24</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">25</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">26</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">27</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">28</span></span>
+        </div>
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">29</span></span>
+            <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">30</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-other-month"><span class="hc-datepicker-body-circle">1</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-other-month"><span class="hc-datepicker-body-circle">2</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-other-month"><span class="hc-datepicker-body-circle">3</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-other-month"><span class="hc-datepicker-body-circle">4</span></span>
+            <span class="hc-datepicker-body-date hc-datepicker-other-month"><span class="hc-datepicker-body-circle">5</span></span>
+        </div>
     </div>
-    <div class="hc-datepicker-header-weekdays">
-        <span class="hc-datepicker-header-label">Sun</span>
-        <span class="hc-datepicker-header-label">Mon</span>
-        <span class="hc-datepicker-header-label">Tue</span>
-        <span class="hc-datepicker-header-label">Wed</span>
-        <span class="hc-datepicker-header-label">Thu</span>
-        <span class="hc-datepicker-header-label">Fri</span>
-        <span class="hc-datepicker-header-label">Sat</span>
+</ng-container>
+<ng-container *ngIf="_pickerMode == 2">
+    <div class="hc-datepicker-header">
+        <div class="hc-datepicker-header-left" (click)="_togglePicker(1)">
+            <span class="hc-datepicker-header-text">2016 - 2039</span> <span class="hc-datepicker-header-chevron-up"></span>
+        </div>
+        <div class="hc-datepicker-header-right">
+            <span class="hc-datepicker-header-button"> <span class="hc-datepicker-header-leftButton"></span> </span>
+            <span class="hc-datepicker-header-today">Today</span>
+            <span class="hc-datepicker-header-button"> <span class="hc-datepicker-header-rightButton"></span> </span>
+        </div>
     </div>
-</div>
-<div class="hc-datepicker-body">
-    <div class="hc-datepicker-body-row">
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">1</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">2</span></span>
-        <span class="hc-datepicker-body-date hc-datepicker-today"><span class="hc-datepicker-body-circle">3</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">4</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">5</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">6</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">7</span></span>
+    <div class="hc-datepicker-body">
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2016</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2017</span></span>
+            <span class="hc-datepicker-body-year hc-datepicker-today" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2018</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2019</span></span>
+        </div>
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2020</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2021</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2022</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2023</span></span>
+        </div>
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2024</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2025</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2026</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2027</span></span>
+        </div>
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-year hc-datepicker-selected" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2028</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2029</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2030</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2031</span></span>
+        </div>
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2032</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2033</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2034</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2035</span></span>
+        </div>
+        <div class="hc-datepicker-body-row">
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2036</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2037</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2038</span></span>
+            <span class="hc-datepicker-body-year" (click)="_yearSelected()"><span class="hc-datepicker-body-circle">2039</span></span>
+        </div>
     </div>
-    <div class="hc-datepicker-body-row">
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">8</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">9</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">10</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">11</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">12</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">13</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">14</span></span>
-    </div>
-    <div class="hc-datepicker-body-row">
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">15</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">16</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">17</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">18</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">19</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">20</span></span>
-        <span class="hc-datepicker-body-date hc-datepicker-selected"><span class="hc-datepicker-body-circle">21</span></span>
-    </div>
-    <div class="hc-datepicker-body-row">
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">22</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">23</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">24</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">25</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">26</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">27</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">28</span></span>
-    </div>
-    <div class="hc-datepicker-body-row">
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">29</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">30</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">1</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">2</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">3</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">4</span></span>
-        <span class="hc-datepicker-body-date"><span class="hc-datepicker-body-circle">5</span></span>
-    </div>
-</div>
+</ng-container>
+<ng-container *ngIf="_pickerMode == 3">
+        <div class="hc-datepicker-header">
+            <div class="hc-datepicker-header-left" (click)="_togglePicker(1)">
+                <span class="hc-datepicker-header-text">2022</span> <span class="hc-datepicker-header-chevron-up"></span>
+            </div>
+            <div class="hc-datepicker-header-right">
+                <span class="hc-datepicker-header-button"> <span class="hc-datepicker-header-leftButton"></span> </span>
+                <span class="hc-datepicker-header-today">Today</span>
+                <span class="hc-datepicker-header-button"> <span class="hc-datepicker-header-rightButton"></span> </span>
+            </div>
+        </div>
+        <div class="hc-datepicker-body">
+            <div class="hc-datepicker-body-row">
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">JAN</span></span>
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">FEB</span></span>
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">MAR</span></span>
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">APR</span></span>
+            </div>
+            <div class="hc-datepicker-body-row">
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">MAY</span></span>
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">JUN</span></span>
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">JUL</span></span>
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">AUG</span></span>
+            </div>
+            <div class="hc-datepicker-body-row">
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">SEP</span></span>
+                <span class="hc-datepicker-body-year hc-datepicker-selected" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">OCT</span></span>
+                <span class="hc-datepicker-body-year" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">NOV</span></span>
+                <span class="hc-datepicker-body-year hc-datepicker-today" (click)="_monthSelected()"><span class="hc-datepicker-body-circle">DEC</span></span>
+            </div>
+        </div>
+    </ng-container>
+

@@ -1,0 +1,19 @@
+<div class="example-date-input">
+    <hc-form-field>
+        <hc-label>Start Date:</hc-label>
+        <input hcInput placeholder="Select date..." readonly class="cursor-pointer" [hcPopover]="rangeExample" popperPlacement="bottom">
+        <hc-icon hcSuffix fontSet="fa" fontIcon="fa-calendar"></hc-icon>
+    </hc-form-field>
+</div>
+
+<div class="example-date-input">
+    <hc-form-field>
+        <hc-label>End Date:</hc-label>
+        <input hcInput placeholder="Select date..." readonly class="cursor-pointer" [hcPopover]="rangeExample" popperPlacement="bottom">
+        <hc-icon hcSuffix fontSet="fa" fontIcon="fa-calendar"></hc-icon>
+    </hc-form-field>
+</div>
+
+<hc-popover-content #rangeExample>
+    <hc-datepicker></hc-datepicker>
+</hc-popover-content>

@@ -37,6 +37,15 @@
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSA3LjA2MSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogIzAwYWVmZjsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggaWQ9IlBhdGhfMTMiIGRhdGEtbmFtZT0iUGF0aCAxMyIgY2xhc3M9ImNscy0xIiBkPSJNMTEuNDc2LTQuODM5YS40NDEuNDQxLDAsMCwwLDAtLjYyMUwxMC4zNDMtNi41ODdhLjQzMy40MzMsMCwwLDAtLjYxNCwwTDYuMS0yLjk2MiwyLjQ4LTYuNTg3YS40MzMuNDMzLDAsMCwwLS42MTQsMEwuNzMyLTUuNDYxYS40NDEuNDQxLDAsMCwwLDAsLjYyMUw1LjguMjE5YS40MzMuNDMzLDAsMCwwLC42MTQsMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0wLjYwNCA2LjcxNSkiLz4KPC9zdmc+Cg==');
 }
 
+.hc-datepicker-header-chevron-up {
+    margin-left: 8px;
+    width: 11px;
+    height: 8px;
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSA3LjA2MSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogIzAwYWVmZjsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggaWQ9ImNoZXZyb24iIGNsYXNzPSJjbHMtMSIgZD0iTTExLjQ3Ni00LjgzOWEuNDQxLjQ0MSwwLDAsMCwwLS42MjFMMTAuMzQzLTYuNTg3YS40MzMuNDMzLDAsMCwwLS4zMDctLjEyOC40MzMuNDMzLDAsMCwwLS4zMDcuMTI4TDYuMS0yLjk2MiwyLjQ4LTYuNTg3YS40MzMuNDMzLDAsMCwwLS4zMDctLjEyOC40MzMuNDMzLDAsMCwwLS4zMDcuMTI4TC43MzItNS40NjFhLjQ0MS40NDEsMCwwLDAsMCwuNjIxTDUuOC4yMTlhLjQzMy40MzMsMCwwLDAsLjMwNy4xMjhBLjQzMy40MzMsMCwwLDAsNi40MTQuMjE5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEuNjA0IDAuMzQ3KSByb3RhdGUoMTgwKSIvPgo8L3N2Zz4K');
+}
+
 .hc-datepicker-header-button {
     cursor: pointer;
     padding: 9px;
@@ -93,6 +102,87 @@
     align-items: center;
     cursor: pointer;
 
+    &:not(.hc-datepicker-other-month) {
+        &:hover {
+            .hc-datepicker-body-circle {
+                border: 2px solid darken($primary-brand, 10%);
+            }
+        }
+    }
+
+    &.hc-datepicker-selected {
+        .hc-datepicker-body-circle {
+            background-color: darken($primary-brand, 10%);
+            color: $white;
+            font-weight: 700;
+        }
+    }
+
+    &.hc-datepicker-today {
+        .hc-datepicker-body-circle {
+            background-color: $slate-gray-200;
+        }
+    }
+
+    &.hc-datepicker-range {
+        .hc-datepicker-body-circle {
+            background-color: darken($primary-brand, 10%);
+            border-radius: 0;
+            width: 36px;
+            color: $white;
+        }
+    }
+
+    &.hc-datepicker-range-start {
+        height: 29px;
+        background: linear-gradient(to right, $white 50%, darken($primary-brand, 10%) 51%);
+
+        .hc-datepicker-body-circle {
+            background-color: $white;
+            border: 2px solid darken($primary-brand, 10%);
+        }
+    }
+
+    &.hc-datepicker-range-end {
+        height: 29px;
+        background: linear-gradient(to right, darken($primary-brand, 10%) 50%, $white 51%);
+
+        .hc-datepicker-body-circle {
+            background-color: $white;
+            border: 2px solid darken($primary-brand, 10%);
+        }
+    }
+
+    &.hc-datepicker-other-month {
+        color: $slate-gray-300;
+        font-weight: normal;
+        cursor: unset;
+    }
+}
+
+.hc-datepicker-body-circle {
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1px;
+}
+
+.hc-datepicker-body-year {
+    width: 63px;
+    height: 36px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .hc-datepicker-body-circle {
+        width: 56px !important;
+        border-radius: 28px !important;
+    }
+
     &:hover {
         .hc-datepicker-body-circle {
             border: 2px solid darken($primary-brand, 10%);
@@ -112,14 +202,4 @@
             background-color: $slate-gray-200;
         }
     }
-}
-
-.hc-datepicker-body-circle {
-    border-radius: 50%;
-    width: 29px;
-    height: 29px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1px;
 }

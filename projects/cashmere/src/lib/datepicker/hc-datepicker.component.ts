@@ -8,4 +8,18 @@ import {parseBooleanAttribute} from '../util';
     styleUrls: ['./hc-datepicker.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class HcDatepickerComponent {}
+export class HcDatepickerComponent {
+    _pickerMode: number = 1;
+
+    _togglePicker(newMode: number) {
+        this._pickerMode = newMode;
+    }
+
+    _yearSelected() {
+        this._pickerMode = 3;
+    }
+
+    _monthSelected() {
+        this._pickerMode = 1;
+    }
+}

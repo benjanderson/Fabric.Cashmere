@@ -1,0 +1,9 @@
+.example-date-input {
+    display: inline-block;
+    width: 200px;
+    margin-right: 30px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
